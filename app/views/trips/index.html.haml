@@ -1,0 +1,8 @@
+%h3.text-center= current_user.full_name
+
+.container
+  - @trips.each do |trip|
+    .row.justify-content-center
+      .col-md-6
+        .alert.alert-primary
+          = trip.title
