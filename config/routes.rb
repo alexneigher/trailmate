@@ -6,5 +6,9 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
 
-  root to: 'welcome#index'
+  authenticated :user do
+    root 'trips#index', as: :authenticated_root
+  end
+
+  root "welcome#index"
 end
