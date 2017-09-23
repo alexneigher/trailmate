@@ -12,10 +12,20 @@ h2{
 .home-feature-banner{
   width: 100%;
   background: #efefef;
-  height: 500px;
-  h1{
-    font-size: 70px;
-    font-weight: 600;
+  background : url('https://images.unsplash.com/photo-1488577198268-201003f53f79?dpr=1&auto=compress,format&fit=crop&w=1600&h=&q=90&cs=tinysrgb&crop=') center top no-repeat;
+  background-size: cover;
+  max-height: calc(100vh - 30px);
+  .home-feature-banner--content{
+    padding: 300px 0;
+
+    h1{
+      font-size: 70px;
+      font-weight: 600;
+      color: #fff;
+    }
+    p{
+      color: #fff;
+    }
   }
 }
 .fill-light{
