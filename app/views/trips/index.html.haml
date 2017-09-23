@@ -1,6 +1,10 @@
 %h3.text-center= current_user.full_name
-
 .container
+  .row.justify-content-center
+    .col-md-4
+      = link_to 'New Trip', new_trip_path, remote: true, class: 'btn btn-primary btn-block'
+    #new-trip-container
+  %hr
   - @trips.each do |trip|
     .row.justify-content-center
       .col-md-6
