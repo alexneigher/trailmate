@@ -50,6 +50,19 @@ p{
     display: inline-block;
     width: 88%;
   }
+  .item{
+    padding: 30px 20px;
+    h2{
+      font-size: 24px;
+    }
+  }
+}
+
+.border-right{
+  border-right: 1px solid #efefef;
+}
+.border-bottom{
+  border-bottom: 1px solid #efefef;
 }
 
 .home-feature-banner{
@@ -105,6 +118,7 @@ p{
   margin-top: -200px;
   padding-bottom: 100px;
 }
+
 .how-it-works{
   background: #fff;
   border-top: 1px solid #efefef;
