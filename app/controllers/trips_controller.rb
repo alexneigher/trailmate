@@ -8,6 +8,15 @@ class TripsController < ApplicationController
     @trip = Trip.new
   end
 
+  def edit
+    @trip = current_user.trips.find(params[:id])
+  end
+
+  def update
+    @trip = current_user.trips.find(params[:id])
+    @trip.update(trip_params)
+  end
+
   def create
     @trip = Trip.create(trip_params.merge(user: current_user))
 
@@ -18,10 +27,19 @@ class TripsController < ApplicationController
     end
   end
 
+  def destroy
+    @trips = current_user.trips
+    
+    @trip = @trips.find(params[:id])
+    @trip.destroy
+
+    render :index
+  end
+
 
   private
     def trip_params
-      params.require(:trip).permit(:title, :description, :check_in_time)
+      params.require(:trip).permit(:title, :description, :check_in_time, :latitude, :longitude)
     end
 
 end

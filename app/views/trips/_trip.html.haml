@@ -4,6 +4,7 @@
       .trip-title
         .i.fa.fa-clock-o{class: (trip.check_in_time_has_past? ? 'text-danger' : 'text-success').to_s}
         = trip.title
+        .pull-right
       .trip-description.pad2b
         = trip.description
 
@@ -11,7 +12,5 @@
       %small.text-muted
         = trip.check_in_time.in_time_zone.strftime('%b %e, %l:%M %p %Z')
         %br
-        %a{href: '#', data: {target: "##{dom_id(trip)}-details" , toggle: 'collapse'} } see details
-
-      .collapse{ id: "#{dom_id(trip)}-details" }
-        = trip.inspect
+        = link_to 'edit', edit_trip_path(trip), remote: true
+        #edit-trip-form

@@ -7,3 +7,7 @@
   #trip-list.m1y
     - @trips.each do |trip|
       = render partial: 'trip', locals: {trip: trip}
+
+    - if @trips.empty?
+      .text-center
+        Add some trips
