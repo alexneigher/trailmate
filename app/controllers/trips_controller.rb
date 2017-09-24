@@ -1,7 +1,7 @@
 class TripsController < ApplicationController
 
   def index
-    @trips = current_user.trips.order('created_at desc')
+    @trips = current_user.trips.includes(:user).order('created_at desc')
   end
 
   def new
