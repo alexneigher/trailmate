@@ -21,6 +21,11 @@
       .col-md-12
         .form-group
           %label Contacts
+          %ul.list-group
+            = f.collection_check_boxes :contact_ids, current_user.contacts.all, :id, :full_name do |b|
+              %li.list-group-item
+                = b.check_box
+                = b.object.full_name
     .row
       .col-md-12
         = f.submit 'Update', class: 'btn btn-primary'

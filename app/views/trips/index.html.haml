@@ -8,6 +8,6 @@
     - @trips.each do |trip|
       = render partial: 'trip', locals: {trip: trip}
 
-    - if @trips.empty?
+    - unless @trips.any?
       .text-center
         Add some trips
