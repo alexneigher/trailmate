@@ -3,10 +3,23 @@ body{
   background: #f5f9fc;
 }
 h1{
-
+  font-size: 80px;
+  font-weight: 600;
 }
 h2{
   font-size: 36px;
+}
+.btn{
+  border-radius: 30px;
+  background: #69d478;
+  border-color: #69d478;
+}
+.home-feature-text{
+  padding-top: 60px;
+  h1{
+    position: relative;
+    padding-bottom: 15px;
+  }
 }
 
 .home-feature-banner{
@@ -14,22 +27,25 @@ h2{
   background: #efefef;
   background : url('https://images.unsplash.com/photo-1488577198268-201003f53f79?dpr=1&auto=compress,format&fit=crop&w=1600&h=&q=90&cs=tinysrgb&crop=') center top no-repeat;
   background-size: cover;
+  height: 550px;
   max-height: calc(100vh - 30px);
-  .home-feature-banner--content{
-    padding: 300px 0;
-
-    h1{
-      font-size: 70px;
-      font-weight: 600;
-      color: #fff;
-    }
-    p{
-      color: #fff;
-    }
-  }
 }
-.fill-light{
+.banner-features{
+  padding: 60px 0;
+  .icon{
+    float:left;
+    display: inline-block;
+    width: 12%;
+    margin-top: 5px;
+    color: #69d478;
 
+  }
+  p{
+    font-weight: 100;
+    float:left;
+    display: inline-block;
+    width: 88%;
+  }
 }
 
 .box{
@@ -41,4 +57,54 @@ h2{
   transition-duration: .15s;
 }
 
+
+.animated-words {
+    display: inline-block;
+    color: #69d478;
+}
+.animated-words span:nth-child(2) {
+    -webkit-animation-delay: 3s;
+    -ms-animation-delay: 3s;
+    animation-delay: 3s;
+}
+.animated-words span:nth-child(3) {
+    -webkit-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s;
+}
+.animated-words span:nth-child(4) {
+    -webkit-animation-delay: 9s;
+    -ms-animation-delay: 9s;
+    animation-delay: 9s;
+}
+.animated-words span:nth-child(5) {
+    -webkit-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s;
+}
+.animated-words span:nth-child(6) {
+    -webkit-animation-delay: 15s;
+    -ms-animation-delay: 15s;
+    animation-delay: 15s;
+}
+
+.animated-words span {
+    position: absolute;
+    opacity: 0;
+    top: 0px;
+    line-height: 1.1;
+    color: #69d478;
+    -webkit-animation: animateWord 18s linear infinite 0s;
+    -ms-animation: animateWord 18s linear infinite 0s;
+    animation: animateWord 18s linear infinite 0s;
+}
+@-webkit-keyframes animateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; -webkit-transform: translateY(-30px); }
+    5% { opacity: 1; -webkit-transform: translateY(0px);}
+    17% { opacity: 1; -webkit-transform: translateY(0px); }
+    20% { opacity: 0; -webkit-transform: translateY(30px); }
+    80% { opacity: 0; }
+    100% { opacity: 0; }
+}
 
