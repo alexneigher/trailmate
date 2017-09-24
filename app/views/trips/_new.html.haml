@@ -34,6 +34,12 @@
           = link_to 'cancel', "#"
 
 :javascript
+  $(window).keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
 
   var script = document.createElement('script');
     script.type = 'text/javascript';
@@ -47,14 +53,32 @@
       });
 
       var marker = new google.maps.Marker({
-        position: {lat: 34, lng: -118},
-        map: map,
-      });
+          position: {lat: 34, lng: -118},
+          map: map,
+          draggable: true
+      })
 
       var autocomplete = new google.maps.places.Autocomplete(document.getElementById('searchTextField'));
       google.maps.event.addListener(autocomplete, 'place_changed', function () {
         var place = autocomplete.getPlace();
-        $("#trip_latitude").val(place.geometry.location.lat());
-        $("#trip_longitude").val(place.geometry.location.lng());
+
+        var latitude = place.geometry.location.lat();
+        var longitude = place.geometry.location.lng();
+
+        var myLatlng = new google.maps.LatLng(latitude,longitude);
+        marker.setPosition(myLatlng);
+        map.panTo(myLatlng);
+        
+        $("#trip_latitude").val(latitude);
+        $("#trip_longitude").val(longitude);
+      });
+
+      google.maps.event.addListener(marker, 'dragend', function(event){
+        latitude = event.latLng.lat();
+        longitude = event.latLng.lng();
+        console.log('dragged');
+        console.log(latitude);
+        $("#trip_latitude").val(latitude);
+        $("#trip_longitude").val(longitude);
       });
     };
