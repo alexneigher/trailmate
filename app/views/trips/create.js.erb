@@ -1,0 +1,2 @@
+$('#new-trip-form').html('');//clear out the form
+$("#trip-list").prepend('<%= j(render partial: "trip", locals: {trip: @trip}) %>'); //new trip at the top of the list
