@@ -1,6 +1,6 @@
 = form_for @trip, url: trip_path(trip), method: :put do |f|
   .row
-    .col-md-6
+    .col-md-12
       .form-group
         %label
         Title
@@ -17,14 +17,13 @@
         Check In Time
         %span.text-danger= @trip.errors.messages[:check_in_time].join
         = f.text_field :check_in_time, class: 'form-control datetimepicker'
-    .col-md-6
+    .col-md-12
       .form-group
         %label Contacts
-      middle column (contacts)
   .row
-    .col-md-3
-      = f.submit 'Update', class: 'btn btn-success btn-sm'
+    .col-md-12
+      = f.submit 'Update', class: 'btn btn-primary'
       = link_to trip_path(trip), method: :delete do
-        .btn.btn-danger.btn-sm Delete
+        .btn.btn-danger Delete
 
       = link_to 'cancel', "#", onclick: "$(this).closest('#edit-trip-form').html('')"
