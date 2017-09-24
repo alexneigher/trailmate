@@ -1,12 +1,15 @@
-%nav.navbar.navbar-toggleable-md.navbar-light.bg-faded
-  %button.navbar-toggler.navbar-toggler-right{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
-    %span.navbar-toggler-icon
-  = link_to 'Home', root_path, class: 'navbar-brand'
-  #navbarSupportedContent.collapse.navbar-collapse
-    %ul.navbar-nav.ml-auto
-      - if user_signed_in?
-        %li.nav-item
-          = link_to 'Logout', destroy_user_session_path, class: 'nav-link', method: :delete
-      - else
-        %li.nav-item
-          = link_to 'Login', new_user_session_path, class: 'nav-link'
+.container
+  %nav.navbar.navbar-toggleable-md.navbar-light.bg-faded
+    %button.navbar-toggler.navbar-toggler-right{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
+      %span.navbar-toggler-icon
+    = link_to "Mom I'm Ok", root_path, class: 'navbar-brand'
+    #navbarSupportedContent.collapse.navbar-collapse
+      %ul.navbar-nav.ml-auto
+        - if user_signed_in?
+          %li.nav-item
+            = link_to 'Logout', destroy_user_session_path, class: 'nav-link', method: :delete
+        - else
+          %li.nav-item
+            = link_to 'Login', new_user_session_path, class: 'nav-link'
+          %li.nav-item
+            = link_to 'Sign Up', new_user_registration_path, class: 'nav-link btn btn-secondary'
