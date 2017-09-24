@@ -6,6 +6,7 @@ class TripsController < ApplicationController
 
   def new
     @trip = Trip.new
+    @contacts = current_user.contacts
   end
 
   def edit
@@ -24,6 +25,8 @@ class TripsController < ApplicationController
   end
 
   def create
+    contact_ids = params[:contact_ids]
+
     @trip = Trip.create(trip_params.merge(user: current_user))
 
     if @trip.valid?
@@ -45,7 +48,7 @@ class TripsController < ApplicationController
 
   private
     def trip_params
-      params.require(:trip).permit(:title, :description, :check_in_time, :latitude, :longitude)
+      params.require(:trip).permit(:title, :description, :check_in_time, :latitude, :longitude, contact_ids: [])
     end
 
 end

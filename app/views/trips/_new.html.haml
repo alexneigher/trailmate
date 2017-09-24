@@ -20,10 +20,15 @@
               Check In Time
               %span.text-danger= @trip.errors.messages[:check_in_time].join
               = f.text_field :check_in_time, class: 'form-control datetimepicker'
+
           .col-md-4
-            .form-group
-              %label Contacts
-            middle column (contacts)
+            %ul.list-group
+              = f.collection_check_boxes :contact_ids, current_user.contacts.all, :id, :full_name do |b|
+                %li.list-group-item
+                  = b.check_box(checked: "false")
+                  = b.object.full_name
+
+
           .col-md-4
             %span.text-danger= @trip.errors.messages[:latitude].join
             %input.form-control{id: 'searchTextField', type: 'text'}

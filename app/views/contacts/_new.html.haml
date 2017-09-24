@@ -4,7 +4,7 @@
       = form_for contact, url: contacts_path, method: :post do |f|
         .form-group
           %i.fa.fa-user
-          = f.text_field :full_name, class: 'form-control', placeholder: 'Full Name'
+          = f.text_field :full_name, class: 'form-control', autofocus: true, placeholder: 'Full Name'
         .form-group
           %i.fa.fa-phone
           = f.text_field :phone_number, class: 'form-control', placeholder: '8005556666'
