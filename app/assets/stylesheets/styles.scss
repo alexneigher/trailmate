@@ -17,7 +17,7 @@ p{
   color: #585858;
 }
 
-.btn{
+.btn-primary{
   border-radius: 30px;
   background: #69d478;
   border-color: #69d478;
@@ -55,13 +55,37 @@ p{
 .home-feature-banner{
   width: 100%;
   background: #efefef;
-  background : url('https://images.unsplash.com/photo-1488577198268-201003f53f79?dpr=2,format&fit=crop&w=1600&h=&q=90&cs=tinysrgb&crop=') center center no-repeat;
+  background : url('https://images.unsplash.com/photo-1480358074177-c2f76f7e00d3?dpr=1&auto=compress,format&fit=crop&w=3900&h=&q=80&cs=tinysrgb&crop=') center center no-repeat;
   background-size: cover;
-  height: 550px;
-  max-height: calc(100vh - 30px);
+  height: 600px;
+  padding: 100px 0;
+  position: relative;
+  &:after{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    background: rgba(0,0,0,0.15);
+  }
+  p{
+    color:white;
+    font-size: 24px;
+    font-weight: 300;
+    z-index: 99;
+    position: relative;
+  }
+  .name{
+    font-size: 18px;
+    color:white;
+    z-index: 99;
+    position: relative;
+  }
 }
 .banner-features{
   padding: 60px 0;
+  border-bottom: 1px solid #efefef;
   .icon{
     float:left;
     display: inline-block;
@@ -76,6 +100,10 @@ p{
     display: inline-block;
     width: 88%;
   }
+}
+.testimonials{
+  margin-top: -200px;
+  padding-bottom: 100px;
 }
 .how-it-works{
   background: #fff;
@@ -99,7 +127,7 @@ p{
   padding: 40px;
   background-color: #fff;
   border-radius: 4px;
-  box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
+  box-shadow: 0 15px 25px rgba(50,50,93,.07), 0 5px 15px rgba(0,0,0,.07);
   transition-property: color,background-color,box-shadow,transform;
   transition-duration: .15s;
   @media (max-width:480px){
@@ -167,8 +195,20 @@ p{
     100% { opacity: 0; }
 }
 
+.form-control{
+  padding: .8rem .75rem;
+  font-weight: 200;
+}
+label{
+  font-size: 13px;
+  margin-bottom: 5px;
+}
 
-
+.shared-links{
+  padding-top: 20px;
+  border-top: 1px solid #efefef;
+  margin-top: 20px;
+}
 
 .trip-title{
   font-size: 18px;
