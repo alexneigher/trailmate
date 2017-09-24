@@ -1,30 +1,31 @@
 = form_for @trip, url: trip_path(trip), method: :put do |f|
-  .row
-    .col-md-6
-      .form-group
-        %label
-        Title
-        %span.text-danger= @trip.errors.messages[:title].join
-        = f.text_field :title, class: 'form-control', placeholder: 'ex: Longs Peak Highline'
-      .form-group
-        %label
-        Description
-        %span.text-danger= @trip.errors.messages[:description].join
-        = f.text_area :description, class: 'form-control', rows: '7', placeholder: 'This message will be sent to your contacts. Some people use this field for local SAR contacts, or emergency instructions...'
+  .pad4y
+    .row
+      .col-md-12
+        .form-group
+          %label
+          Title
+          %span.text-danger= @trip.errors.messages[:title].join
+          = f.text_field :title, class: 'form-control', placeholder: 'ex: Longs Peak Highline'
+        .form-group
+          %label
+          Description
+          %span.text-danger= @trip.errors.messages[:description].join
+          = f.text_area :description, class: 'form-control', rows: '7', placeholder: 'This message will be sent to your contacts. Some people use this field for local SAR contacts, or emergency instructions...'
 
-      .form-group
-        %label
-        Check In Time
-        %span.text-danger= @trip.errors.messages[:check_in_time].join
-        = f.text_field :check_in_time, class: 'form-control datetimepicker'
-    .col-md-6
-      .form-group
-        %label Contacts
-      middle column (contacts)
-  .row
-    .col-md-3
-      = f.submit 'Update', class: 'btn btn-success btn-sm'
-      = link_to trip_path(trip), method: :delete do
-        .btn.btn-danger.btn-sm Delete
+        .form-group
+          %label
+          Check In Time
+          %span.text-danger= @trip.errors.messages[:check_in_time].join
+          = f.text_field :check_in_time, class: 'form-control datetimepicker'
+      .col-md-12
+        .form-group
+          %label Contacts
+    .row
+      .col-md-12
+        = f.submit 'Update', class: 'btn btn-primary'
 
-      = link_to 'cancel', "#", onclick: "$(this).closest('#edit-trip-form').html('')"
+        = link_to 'cancel', "#", onclick: "$(this).closest('#edit-trip-form').html('')"
+
+        = link_to trip_path(trip), method: :delete do
+          .text-muted.fr Delete

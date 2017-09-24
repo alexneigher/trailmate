@@ -3,6 +3,7 @@
   #trip-list.m1y
     = render partial: 'trip', locals: {trip: @trip}
 .container
-  .col-md-6
-    = link_to 'edit', edit_trip_path(@trip), remote: true
-    #edit-trip-form
+  .row.justify-content-center
+    .col-md-6
+      = link_to 'Edit', edit_trip_path(@trip), remote: true, class: "btn btn-secondary"
+      #edit-trip-form
