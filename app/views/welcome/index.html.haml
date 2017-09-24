@@ -18,43 +18,44 @@
       .icon
         %i{"data-feather" => "plus-circle"}
       %p
-        Create trips that show where you're headed, what you're doing, and when you'll be back.
+        Create plans that show where you're headed, what you're doing, and when you'll be back.
     .col-lg-4
       .icon
         %i{"data-feather" => "share"}
       %p
-        Share your trip with close friends and family so people know where you are.
+        Share your plan with close friends and family so people know where you are.
     .col-lg-4
       .icon
         %i{"data-feather" => "bell"}
       %p
-        They'll get sent automatic email and text alerts if you don't check in by your scheduled time.
+        They'll get sent automatic email and text message alerts if you don't check in by your scheduled time.
 .home-feature-banner
   .container
     .row
       .col-lg-7
-        %p "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ut, tempore hic accusamus, repudiandae modi a unde similique sapiente placeat voluptate officiis quod odit eius, perferendis laborum et, ipsam pariatur!"
-        .name John Doe
-.testimonials
+        %p "This is a great idea that we think can help SAR efforts in Colorado and around the country avoid fatal accidents. I'd encourage anyone hiking 14ers alone, or not, to utilize this service."
+        .name - Colorado Search and Rescue
+.testimonials.border-bottom
   .container
     .box
+      %h2.text-center.pad2b More Testimonials
       .row
         .col-lg-6
-          .box-skinny
+          .box-skinny.m3b
             %p "It's the greatest thing ever. Kyle actually tells me what he's doing now. Before, I would only find out after the fact."
-            %p - Kyle's mom
+            %p.text-muted - Kyle's mom
+        .col-lg-6
+          .box-skinny.m3b
+            %p "Sometimes he would just disappear for a few days and I was never sure whether I should be worried. This makes things a lot easier."
+            %p.text-muted - Kyle's roommate
         .col-lg-6
           .box-skinny
-            %p "Sometimes he would just disappear for a few days and I was never sure whether he was just doing some crazy mountain thing or if I should be worried. This makes things a lot easier."
-            %p - Kyle's roommate
+            %p "Another Testimonial"
+            %p - Bob's mom
         .col-lg-6
           .box-skinny
-            %p "It's the greatest thing ever. Kyle actually tells me what he's doing now. Before, I would only find out after the fact."
-            %p - Kyle's mom
-        .col-lg-6
-          .box-skinny
-            %p "Sometimes he would just disappear for a few days and I was never sure whether he was just doing some crazy mountain thing or if I should be worried. This makes things a lot easier."
-            %p - Kyle's roommate
+            %p " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate harum ullam inventore at, sit molestias! Magnam culpa pariatur fugiat necessitatibus nam."
+            %p - Sarah's roommate
 .about-section.pad4y
   .container
     .row.pad4y
@@ -62,102 +63,104 @@
         %h2.text-center How it Works
         .text-center Let's break this down into a potential real-life scenario
     .container.box
-      .row.border-bottom.no-gutters
-        .col-lg-6.border-right
-          .text-center
-            Before Trailmate:
-          .item
-            .number
-              1.
-            %p
-              It's Friday evening, and you're decided to hike a nearby peak in the morning. It's a pretty straightforward hike for your ability level.
-        .col-lg-6
-          .text-center
-            After Trailmate:
-          .item
-            .number
-              1.
-            %p
-              It's Friday evening, and you're decided to hike a nearby peak in the morning. It's a pretty straightforward hike for your ability level.
+      .comparison
+        .row.border-bottom.no-gutters
+          .col-lg-6.border-right
+            .text-center
+              Before Trailmate:
+            .item
+              .number
+                1.
+              %p
+                It's Friday evening, and you're decided to hike a nearby peak in the morning. It's a pretty straightforward hike for your ability level.
+          .col-lg-6
+            .text-center
+              After Trailmate:
+            .item
+              .number
+                1.
+              %p
+                It's Friday evening, and you're decided to hike a nearby peak in the morning. It's a pretty straightforward hike for your ability level.
 
-      .row.border-bottom.no-gutters
-        .col-lg-6.border-right
-          .item
-            .number
-              2.
-            %p
-              Your roommate is out at the bars, but you go to bed early. You don't let them, or anyone else know where you're headed because you're sure it's a straightforward hike.
-        .col-lg-6
-          .item
-            .number
-              2.
-            %p
-              Your roommate is out at the bars, and you go to bed early. You setup a trip on Mom I'm Ok, which notifies your roommate and another close friend about what you plan on doing. You only expect the hike to take a few hours, so you set a second notification for Saturday evening.
-      .row.border-bottom.no-gutters
-        .col-lg-6.border-right
-          .item
-            .number
-              3.
-            %p
-              You get up early, drive to the trailhead and head out on your hike.
-        .col-lg-6
-          .item
-            .number
-              3.
-            %p
-              You get up early, drive to the trailhead and head out on your hike.
+        .row.border-bottom.no-gutters
+          .col-lg-6.border-right
+            .item
+              .number
+                2.
+              %p
+                Your roommate is out at the bars, but you go to bed early. You don't let them, or anyone else know where you're headed because you're sure it's a straightforward hike.
+          .col-lg-6
+            .item
+              .number
+                2.
+              %p
+                Your roommate is out at the bars, and you go to bed early. You setup a trip on Trailmate, which notifies your roommate and another close friend about what you plan on doing. You only expect the hike to take a few hours, so you set a second notification for Saturday evening.
+        .row.border-bottom.no-gutters
+          .col-lg-6.border-right
+            .item
+              .number
+                3.
+              %p
+                You get up early, drive to the trailhead and head out on your hike.
+          .col-lg-6
+            .item
+              .number
+                3.
+              %p
+                You get up early, drive to the trailhead and head out on your hike.
 
-      .row.border-bottom.no-gutters
-        .col-lg-6.border-right
-          .item
-            .number
-              4.
-            %p
-              Sometime during your hike, you trip on a root and break your ankle. It's not life threatening, but you don't have signal and you're in too much pain to get to the trailhead.
+        .row.border-bottom.no-gutters
+          .col-lg-6.border-right
+            .item
+              .number
+                4.
+              %p
+                Sometime during your hike, you trip on a root and break your ankle. It's not life threatening, but you don't have signal and you're in too much pain to get to the trailhead.
 
-        .col-lg-6
-          .item
-            .number
-              4.
-            %p
-              Sometime during your hike, you trip on a root and break your ankle. It's not life threatening, but you don't have signal and you're in too much pain to get to the trailhead.
+          .col-lg-6
+            .item
+              .number
+                4.
+              %p
+                Sometime during your hike, you trip on a root and break your ankle. It's not life threatening, but you don't have signal and you're in too much pain to get to the trailhead.
 
-      .row.border-bottom.no-gutters
-        .col-lg-6.border-right
-          .item
-            .number
-              5.
-            %p
-              Your roommate is out and about all weekend, and no one reports you missing until you don't show up for work on Monday. However, no one knows where you are.
-        .col-lg-6
-          .item
-            .number
-              5.
-            %p
-              Your roommate and friend get notified Saturday evening when you haven't checked in. They both try and get in touch with you, but when they are unsuccessful, one of them notifies the local ranger station. They include what your plan was and your general location, which is helpful for SAR.
+        .row.border-bottom.no-gutters
+          .col-lg-6.border-right
+            .item
+              .number
+                5.
+              %p
+                Your roommate is out and about all weekend, and no one reports you missing until you don't show up for work on Monday. However, no one knows where you are.
+          .col-lg-6
+            .item
+              .number
+                5.
+              %p
+                Your roommate and friend get notified via eamil and text on Saturday evening when you haven't checked in. They both try and get in touch with you, but when they are unsuccessful, one of them notifies the local ranger station. They include what your plan was and your general location, which is helpful for SAR.
 
-      .row.border-bottom.no-gutters
-        .col-lg-6.border-right
-          .item
-        .col-lg-6
-          .item
-            .number
-              6.
-            %p
-              SAR finds you on the trail, trying to crawl your way back to the trailhead. They successfully extract you and deliver you to the hospital to have your broken ankle set.
+        .row.border-bottom.no-gutters
+          .col-lg-6.border-right
+            .item
+          .col-lg-6
+            .item
+              .number
+                6.
+              %p
+                SAR finds you on the trail, trying to crawl your way back to the trailhead. They successfully extract you and deliver you to the hospital to have your broken ankle set.
 
-      .row.border-bottom.no-gutters
-        .col-lg-6.border-right
-          .item
-            .text-muted Conclusion:
-            %h2
-              You die of hypothermia.
-        .col-lg-6
-          .item
-            .text-muted Conclusion:
-            %h2 You're back home late Saturday evening, safe and sound.
-      .row.text-center.pad4y
-        Is this a morbid example? Yes. Is this an exaggerated situation? Well, not really. Unfortunately, this is a scenario that plays out every year, often with fatal consequences.
+        .row.border-bottom.no-gutters
+          .col-lg-6.border-right
+            .item
+              .text-muted Conclusion:
+              %h2
+                You die of hypothermia.
+          .col-lg-6
+            .item
+              .text-muted Conclusion:
+              %h2 You're back home late Saturday evening, safe and sound.
+      .row.justify-content-center.pad4y
+        .col-lg-8.text-center
+          %p Is this a morbid example? Yes. Is this an exaggerated situation? Well, not really. Unfortunately, this is a scenario that plays out every year, often with fatal consequences.
 
 
 .how-it-works
