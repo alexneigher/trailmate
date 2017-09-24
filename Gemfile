@@ -17,6 +17,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'erubis', '~> 2.7'
 
+gem "font-awesome-rails"
+
 group :development, :test do
   gem 'pry-rails'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

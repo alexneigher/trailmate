@@ -2,9 +2,11 @@
   .col-md-6
     .box.m1y
       .trip-title
+        .i.fa.fa-clock-o{class: (trip.check_in_time_has_past? ? 'text-danger' : 'text-success').to_s}
         = trip.title
       .trip-description.pad2b
         = trip.description
+
       %small Intended check in time:
       %small.text-muted
         = trip.check_in_time.in_time_zone.strftime('%b %e, %l:%M %p %Z')
