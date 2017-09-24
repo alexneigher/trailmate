@@ -1,1 +1,1 @@
-$('#<%= dom_id(@trip) %>').replaceWith('hy')
+$('#<%= dom_id(@trip) %>').replaceWith('<%= j(render partial: "trip", locals: {trip: @trip}) %>');
