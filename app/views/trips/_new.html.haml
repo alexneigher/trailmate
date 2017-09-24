@@ -3,12 +3,12 @@
     .box.m1y
       = form_for @trip, url: trips_path, method: :post, remote: true do |f|
         .form-group
-          %label 
+          %label
           Title
           %span.text-danger= @trip.errors.messages[:title].join
           = f.text_field :title, class: 'form-control', placeholder: 'ex: Longs Peak Highline'
         .form-group
-          %label 
+          %label
           Description
           %span.text-danger= @trip.errors.messages[:description].join
           = f.text_area :description, class: 'form-control', placeholder: 'This message will be sent to your contacts. Some people use this field for local SAR contacts, or emergency instructions...'

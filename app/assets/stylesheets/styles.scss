@@ -9,6 +9,13 @@ h1{
 h2{
   font-size: 36px;
 }
+h3{
+  font-size: 22px;
+}
+p{
+  font-weight: 100;
+  color: #686868;
+}
 .btn{
   border-radius: 30px;
   background: #69d478;
@@ -25,7 +32,7 @@ h2{
 .home-feature-banner{
   width: 100%;
   background: #efefef;
-  background : url('https://images.unsplash.com/photo-1488577198268-201003f53f79?dpr=1&auto=compress,format&fit=crop&w=1600&h=&q=90&cs=tinysrgb&crop=') center top no-repeat;
+  background : url('https://images.unsplash.com/photo-1488577198268-201003f53f79?dpr=1&auto=compress,format&fit=crop&w=1600&h=&q=90&cs=tinysrgb&crop=') center center no-repeat;
   background-size: cover;
   height: 550px;
   max-height: calc(100vh - 30px);
@@ -47,6 +54,12 @@ h2{
     width: 88%;
   }
 }
+.how-it-works{
+  p{
+    font-size: 24px;
+    font-weight: 300;
+  }
+}
 
 .box{
   padding: 40px;
@@ -55,6 +68,18 @@ h2{
   box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
   transition-property: color,background-color,box-shadow,transform;
   transition-duration: .15s;
+  @media (max-width:480px){
+    padding: 20px;
+  }
+}
+.box-skinny{
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #efefef;
+  @media (max-width:480px){
+    padding: 20px;
+  }
 }
 
 
@@ -108,3 +133,13 @@ h2{
     100% { opacity: 0; }
 }
 
+
+
+
+.trip-title{
+  font-size: 18px;
+  font-weight: 600;
+}
+.trip-description{
+  font-weight: 200;
+}
