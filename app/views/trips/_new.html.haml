@@ -11,7 +11,7 @@
           %label
           Description
           %span.text-danger= @trip.errors.messages[:description].join
-          = f.text_area :description, class: 'form-control', placeholder: 'This message will be sent to your contacts. Some people use this field for local SAR contacts, or emergency instructions...'
+          = f.text_area :description, class: 'form-control', rows: '7', placeholder: 'This message will be sent to your contacts. Some people use this field for local SAR contacts, or emergency instructions...'
 
         .form-group
           %label

@@ -14,8 +14,9 @@ h3{
 }
 p{
   font-weight: 100;
-  color: #686868;
+  color: #585858;
 }
+
 .btn{
   border-radius: 30px;
   background: #69d478;
@@ -28,11 +29,33 @@ p{
     padding-bottom: 15px;
   }
 }
+.about-section{
+  background: url('https://images.unsplash.com/photo-1446470031315-c47a015f36f2?dpr=2&fit=crop&w=2767&h=&q=80&bri=10&cs=tinysrgb&crop=') center center;
+  background-size: cover;
+  min-height: 800px;
+  h2{
+    font-size: 50px;
+    font-weight: 700;
+  }
+  .number{
+    font-size: 20px;
+    float:left;
+    display: inline-block;
+    width: 12%;
+    color: #69d478;
+  }
+  p{
+    font-weight: 100;
+    float:left;
+    display: inline-block;
+    width: 88%;
+  }
+}
 
 .home-feature-banner{
   width: 100%;
   background: #efefef;
-  background : url('https://images.unsplash.com/photo-1488577198268-201003f53f79?dpr=1&auto=compress,format&fit=crop&w=1600&h=&q=90&cs=tinysrgb&crop=') center center no-repeat;
+  background : url('https://images.unsplash.com/photo-1488577198268-201003f53f79?dpr=2,format&fit=crop&w=1600&h=&q=90&cs=tinysrgb&crop=') center center no-repeat;
   background-size: cover;
   height: 550px;
   max-height: calc(100vh - 30px);
@@ -55,9 +78,20 @@ p{
   }
 }
 .how-it-works{
+  background: #fff;
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
   p{
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 300;
+  }
+}
+.faq-item{
+  border-bottom: 1px solid #efefef;
+  padding: 15px 0;
+  h3{
+    font-size: 18px;
+    font-weight: 700;
   }
 }
 
