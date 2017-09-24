@@ -1,1 +1,7 @@
 $('#new-trip-form').html('<%= j(render partial: "new", locals: {trip: @trip}) %>');
+
+$('.datetimepicker').datetimepicker({
+  timeFormat: 'HH:00',
+  dateFormat: 'yy-mm-dd',
+  showMinutes: false,
+});

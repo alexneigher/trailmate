@@ -1,7 +1,7 @@
 class Trip < ApplicationRecord
   belongs_to :user
 
-  validates_presence_of :title, :description, :check_in_time
+  validates_presence_of :title, :description, :check_in_time, :latitude, :longitude
 
 
   def check_in_time_has_past?

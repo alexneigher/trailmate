@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170923222954) do
+ActiveRecord::Schema.define(version: 20170924193032) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,9 @@ ActiveRecord::Schema.define(version: 20170923222954) do
     t.datetime "check_in_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "checked_in", default: false
+    t.decimal "latitude", precision: 10, scale: 6
+    t.decimal "longitude", precision: 10, scale: 6
     t.index ["user_id"], name: "index_trips_on_user_id"
   end
 

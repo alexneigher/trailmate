@@ -1,32 +1,54 @@
 .row.justify-content-center
-  .col-md-6
+  .col-md-12
     .box.m1y
       = form_for @trip, url: trips_path, method: :post, remote: true do |f|
-        .form-group
-          %label
-          Title
-          %span.text-danger= @trip.errors.messages[:title].join
-          = f.text_field :title, class: 'form-control', placeholder: 'ex: Longs Peak Highline'
-        .form-group
-          %label
-          Description
-          %span.text-danger= @trip.errors.messages[:description].join
-          = f.text_area :description, class: 'form-control', rows: '7', placeholder: 'This message will be sent to your contacts. Some people use this field for local SAR contacts, or emergency instructions...'
+        .row
+          .col-md-4
+            
+            .form-group
+              %label
+              Title
+              %span.text-danger= @trip.errors.messages[:title].join
+              = f.text_field :title, class: 'form-control', placeholder: 'ex: Longs Peak Highline'
+            .form-group
+              %label
+              Description
+              %span.text-danger= @trip.errors.messages[:description].join
+              = f.text_area :description, class: 'form-control', rows: '7', placeholder: 'This message will be sent to your contacts. Some people use this field for local SAR contacts, or emergency instructions...'
 
-        .form-group
-          %label
-          Check In Time
-          %span.text-danger= @trip.errors.messages[:check_in_time].join
-          = f.text_field :check_in_time, class: 'form-control datetimepicker'
+            .form-group
+              %label
+              Check In Time
+              %span.text-danger= @trip.errors.messages[:check_in_time].join
+              = f.text_field :check_in_time, class: 'form-control datetimepicker'
+          .col-md-4
+            .form-group
+              %label Contacts
+            middle column (contacts)
+          .col-md-4
+            
+
+            %input.form-control{id: 'searchTextField', type: 'text'}
+            #trip-location-map{style: 'height: 350px; width: 100%;'}
+            = f.text_field :latitude, placeholder: 'lat'
+            = f.text_field :longitude, placeholder: 'lon'
         %hr
           = f.submit 'Save', class: 'btn btn-success'
           = link_to 'cancel', "#"
 
 :javascript
-  $(function(){
-    $('.datetimepicker').datetimepicker({
-      timeFormat: 'HH:00',
-      dateFormat: 'yy-mm-dd',
-      showMinutes: false,
-    });
-  })
+
+  var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCrRUceldHOEg1rirq96YunD18RySC3LnY&libraries=places&callback=init";
+    document.body.appendChild(script);
+
+
+    function init(){
+      var autocomplete = new google.maps.places.Autocomplete(document.getElementById('searchTextField'));
+      google.maps.event.addListener(autocomplete, 'place_changed', function () {
+        var place = autocomplete.getPlace();
+        $("#trip_latitude").val(place.geometry.location.lat());
+        $("#trip_longitude").val(place.geometry.location.lng());
+      });
+    };
