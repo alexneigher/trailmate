@@ -1,4 +1,7 @@
-.row.justify-content-center
+.row.justify-content-center{id: dom_id(trip)}
   .col-md-6
     .box.m1y
-      = trip.title
+      %div
+        = trip.title
+      %small.text-muted
+        = trip.check_in_time.in_time_zone.strftime('%b %e, %l:%M %p %Z')

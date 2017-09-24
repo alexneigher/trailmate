@@ -5,6 +5,6 @@
       = link_to 'New Trip', new_trip_path, remote: true, class: 'btn btn-primary btn-block'
   #new-trip-form
   %hr
-  - @trips.each do |trip|
-    #trip-list
-    = render partial: 'trip', locals: {trip: trip}
+  #trip-list
+    - @trips.each do |trip|
+      = render partial: 'trip', locals: {trip: trip}

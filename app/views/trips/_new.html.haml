@@ -25,14 +25,8 @@
 :javascript
   $(function(){
     $('.datetimepicker').datetimepicker({
-      timeFormat: 'HH:00 z',
+      timeFormat: 'HH:00',
       dateFormat: 'yy-mm-dd',
       showMinutes: false,
-      timezoneList: [ 
-          { value: -300, label: 'Eastern'}, 
-          { value: -360, label: 'Central' }, 
-          { value: -420, label: 'Mountain' }, 
-          { value: -480, label: 'Pacific' } 
-        ]
     });
   })
