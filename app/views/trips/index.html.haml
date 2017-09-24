@@ -1,10 +1,9 @@
-%h3.text-center= current_user.full_name
+%h2.text-center.pad2b= current_user.full_name
 .container
   .row.justify-content-center
-    .col-md-4
-      = link_to 'New Trip', new_trip_path, remote: true, class: 'btn btn-primary btn-block'
+    .col-md-4.text-center
+      = link_to 'New Trip', new_trip_path, remote: true, class: 'btn btn-primary'
   #new-trip-form
-  %hr
-  #trip-list
+  #trip-list.m1y
     - @trips.each do |trip|
       = render partial: 'trip', locals: {trip: trip}

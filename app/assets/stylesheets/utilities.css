@@ -1,6 +1,12 @@
 .m1y{
   margin: 10px 0;
 }
+.pad2b{
+  padding-bottom: 20px;
+}
+.pad4y{
+  padding: 40px 0;
+}
 .light{
   font-weight: 200;
 }

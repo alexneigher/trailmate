@@ -1,9 +1,12 @@
 .row.justify-content-center{id: dom_id(trip)}
   .col-md-6
     .box.m1y
-      %div
+      .trip-title
         = trip.title
+      .trip-description.pad2b
+        = trip.description
       %small.text-muted
+        Check in time:
         = trip.check_in_time.in_time_zone.strftime('%b %e, %l:%M %p %Z')
 
       %a{href: '#', data: {target: "##{dom_id(trip)}-details" , toggle: 'collapse'} } see details
