@@ -1,0 +1,15 @@
+.row.justify-content-center{id: dom_id(contact)}
+  .col-md-6
+    .box.m1y
+      = form_for contact, url: contact_path(contact), method: :put do |f|
+        .form-group
+          %i.fa.fa-user
+          = f.text_field :full_name, class: 'form-control'
+        .form-group
+          %i.fa.fa-phone
+          = f.text_field :phone_number, class: 'form-control'
+        .form-group
+          %i.fa.fa-envelope-o
+          = f.text_field :email, class: 'form-control'
+        .form-group
+          = f.submit 'Update', class: 'btn btn-primary'

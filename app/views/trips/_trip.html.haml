@@ -3,15 +3,13 @@
     .box.m1y
       .trip-title
         .i.fa.fa-clock-o{class: (trip.check_in_time_has_past? ? 'text-danger' : 'text-success').to_s}
-        = trip.title
+        = link_to trip.title, trip_path(trip)
         .pull-right
-          = link_to 'public share url', public_trip_url(trip.user.url_slug, trip.id), target: '_blank'
+          %small
+            = link_to 'public share url', public_trip_url(trip.user.url_slug, trip.id), target: '_blank'
       .trip-description.pad2b
         = trip.description
 
       %small Intended check in time:
       %small.text-muted
         = trip.check_in_time.in_time_zone.strftime('%b %e, %l:%M %p %Z')
-        %br
-        = link_to 'edit', edit_trip_path(trip), remote: true
-        #edit-trip-form

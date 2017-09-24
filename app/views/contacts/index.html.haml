@@ -1,0 +1,8 @@
+.container
+  .row.justify-content-center
+    .col-md-4.text-center
+      = link_to 'New Contact', new_contact_path, remote: true, class: 'btn btn-primary'
+  #new-contact-form
+  #contact-list.m1y
+  - @contacts.each do |contact|
+    = render partial: 'contact', locals: {contact: contact}

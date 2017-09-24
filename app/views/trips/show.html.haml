@@ -1,0 +1,8 @@
+%h2.text-center.pad2b= current_user.full_name
+.container
+  #trip-list.m1y
+    = render partial: 'trip', locals: {trip: @trip}
+.container
+  .col-md-6
+    = link_to 'edit', edit_trip_path(@trip), remote: true
+    #edit-trip-form

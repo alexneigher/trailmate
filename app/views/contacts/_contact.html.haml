@@ -1,0 +1,16 @@
+.row.justify-content-center{id: dom_id(contact)}
+  .col-md-6
+    .box.m1y
+      .trip-title
+        = contact.full_name
+        .pull-right
+          %small.small
+            = link_to edit_contact_path(contact), remote: true do
+              %i.fa.fa-pencil
+      %small.small
+        %i.fa.fa-phone
+        = contact.phone_number
+      %br
+      %small.small
+        %i.fa.fa-envelope-o
+        = contact.email

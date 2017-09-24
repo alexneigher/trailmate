@@ -12,9 +12,15 @@ class TripsController < ApplicationController
     @trip = current_user.trips.find(params[:id])
   end
 
+  def show
+    @trip = current_user.trips.find(params[:id])
+  end
+
   def update
     @trip = current_user.trips.find(params[:id])
     @trip.update(trip_params)
+
+    redirect_to trip_path(@trip)
   end
 
   def create
