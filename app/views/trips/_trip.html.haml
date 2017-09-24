@@ -8,3 +8,8 @@
       %small Intended check in time:
       %small.text-muted
         = trip.check_in_time.in_time_zone.strftime('%b %e, %l:%M %p %Z')
+        %br
+        %a{href: '#', data: {target: "##{dom_id(trip)}-details" , toggle: 'collapse'} } see details
+
+      .collapse{ id: "#{dom_id(trip)}-details" }
+        = trip.inspect
