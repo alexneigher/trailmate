@@ -37,25 +37,29 @@ p{
     font-size: 50px;
     font-weight: 700;
   }
-  .number{
-    font-size: 20px;
-    float:left;
-    display: inline-block;
-    width: 12%;
-    color: #69d478;
-  }
-  p{
-    font-weight: 100;
-    float:left;
-    display: inline-block;
-    width: 88%;
-  }
-  .item{
-    padding: 30px 20px;
-    h2{
-      font-size: 24px;
+  .comparison{
+    .number{
+      font-size: 20px;
+      float:left;
+      display: inline-block;
+      width: 12%;
+      color: #69d478;
+    }
+    p{
+      font-weight: 100;
+      float:left;
+      display: inline-block;
+      width: 88%;
+    }
+    .item{
+      padding: 30px 20px;
+      h2{
+        font-size: 24px;
+      }
     }
   }
+
+
 }
 
 .border-right{
