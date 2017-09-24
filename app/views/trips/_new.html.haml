@@ -4,7 +4,6 @@
       = form_for @trip, url: trips_path, method: :post, remote: true do |f|
         .row
           .col-md-4
-            
             .form-group
               %label
               Title
@@ -26,8 +25,6 @@
               %label Contacts
             middle column (contacts)
           .col-md-4
-            
-
             %input.form-control{id: 'searchTextField', type: 'text'}
             #trip-location-map{style: 'height: 350px; width: 100%;'}
             = f.text_field :latitude, placeholder: 'lat'
@@ -43,8 +40,17 @@
     script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCrRUceldHOEg1rirq96YunD18RySC3LnY&libraries=places&callback=init";
     document.body.appendChild(script);
 
-
     function init(){
+      var map = new google.maps.Map(document.getElementById('trip-location-map'), {
+        center: {lat: 34, lng: -118},
+        zoom: 8
+      });
+
+      var marker = new google.maps.Marker({
+        position: {lat: 34, lng: -118},
+        map: map,
+      });
+
       var autocomplete = new google.maps.places.Autocomplete(document.getElementById('searchTextField'));
       google.maps.event.addListener(autocomplete, 'place_changed', function () {
         var place = autocomplete.getPlace();
