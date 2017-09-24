@@ -11,4 +11,11 @@ Rails.application.routes.draw do
   end
 
   root "welcome#index"
+
+  #route to share urls
+  namespace :public, path: ':url_slug' do
+    get '/', to: 'trips#index', as: :trips
+    get '/:id', to: 'trips#show', as: :trip
+  end
+
 end

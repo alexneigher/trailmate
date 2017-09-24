@@ -1,0 +1,5 @@
+%h2.text-center.pad2b= current_user.full_name
+.container
+
+  - @trips.each do |trip|
+    = render partial: 'public/trips/trip', locals: {trip: trip}
