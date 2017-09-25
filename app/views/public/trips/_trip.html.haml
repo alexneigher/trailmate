@@ -11,3 +11,7 @@
       %small Intended check in time:
       %small.text-muted
         = trip.check_in_time.in_time_zone.strftime('%b %e, %l:%M %p %Z')
+      - if trip.checked_in?
+        .text-success
+          %i.fa.fa-check
+          #{trip.user.full_name} has checked in
