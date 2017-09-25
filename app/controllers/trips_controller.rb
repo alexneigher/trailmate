@@ -20,8 +20,11 @@ class TripsController < ApplicationController
   def update
     @trip = current_user.trips.find(params[:id])
     @trip.update(trip_params)
-
-    redirect_to trip_path(@trip)
+    respond_to do |format|
+      format.html{ redirect_to trip_path(@trip) }
+      format.js{ render :update }
+    end
+    
   end
 
   def create
@@ -48,7 +51,7 @@ class TripsController < ApplicationController
 
   private
     def trip_params
-      params.require(:trip).permit(:title, :description, :check_in_time, :latitude, :longitude, contact_ids: [])
+      params.require(:trip).permit(:title, :description, :checked_in, :check_in_time, :latitude, :longitude, contact_ids: [])
     end
 
 end

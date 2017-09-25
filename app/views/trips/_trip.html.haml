@@ -14,6 +14,12 @@
       %small.text-muted
         = trip.check_in_time.in_time_zone.strftime('%b %e, %l:%M %p %Z')
 
-      .btn.btn-primary.btn-block.btn-lg.m3t Check In
+      - if trip.checked_in?
+        .text-success
+          %i.fa.fa-check
+          #{trip.user.full_name} has checked in
+      - else
+        = link_to trip_path(trip, trip: {checked_in: true}), method: :put, remote: true do
+          .btn.btn-primary.btn-block.btn-lg.m3t Check In
 
 
